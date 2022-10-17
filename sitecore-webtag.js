@@ -76,6 +76,7 @@ function sendAddEvent(
       };
       // Invoke event create
       // (<event msg>, <callback function>, <format>)
+      console.log(addEvent);
       Boxever.eventCreate(addEvent, function (data) {}, "json");
     });
   }
