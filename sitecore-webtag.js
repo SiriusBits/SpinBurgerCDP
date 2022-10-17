@@ -18,3 +18,23 @@
          s.src = 'https://d1mj578wat5n4o.cloudfront.net/boxever-1.4.9.min.js';
          var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
     })();
+
+    //function to trigger the IDENTITY event
+function login(email) {
+    _boxeverq.push(function () {
+      var identityEvent = {
+        browser_id: Boxever.getID(),
+        channel: "WEB",
+        type: "IDENTITY",
+        language: "EN",
+        currency: "USD",
+        page: "homepage",
+        pos: "SpinBurgerCDP",
+        email: email,
+      };
+      // Invoke event create
+      // (<event msg>, <callback function>, <format>)
+      Boxever.eventCreate(identityEvent, function (data) {}, "json");
+    });
+  }
+  
