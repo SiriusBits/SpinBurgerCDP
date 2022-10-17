@@ -44,3 +44,38 @@ function login(email) {
       Boxever.eventCreate(identityEvent, function (data) {}, "json");
     });
   }
+
+  //function to ADD the product items to the cart and send to CDP
+function sendAddEvent(
+    productType,
+    itemID,
+    productName,
+    productPrice,
+    productID,
+    productCurrency
+  ) {
+    _boxeverq.push(function () {
+      var addEvent = {
+        browser_id: Boxever.getID(),
+        channel: "WEB",
+        type: "ADD",
+        language: "EN",
+        currency: "USD",
+        page: "homepage",
+        pos: "SpinBurgerCDP",
+        product: {
+          type: productType,
+          item_id: itemID,
+          name: productName,
+          orderedAt: new Date().toISOString(),
+          quantity: 1,
+          price: productPrice,
+          productId: productID,
+          currencyCode: productCurrency,
+        },
+      };
+      // Invoke event create
+      // (<event msg>, <callback function>, <format>)
+      Boxever.eventCreate(addEvent, function (data) {}, "json");
+    });
+  }
