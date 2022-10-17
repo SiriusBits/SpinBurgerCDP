@@ -34,7 +34,7 @@ function login(email) {
       };
       // Invoke event create
       // (<event msg>, <callback function>, <format>)
-      console.log(email);
+      console.log(identityEvent);
       Boxever.eventCreate(identityEvent, function (data) {}, "json");
     });
   }
