@@ -31,6 +31,12 @@ function login(email) {
         page: "homepage",
         pos: "SpinBurgerCDP",
         email: email,
+        identifiers: [
+            {
+                provider: 'email',
+                id: email,
+            }
+        ]
       };
       // Invoke event create
       // (<event msg>, <callback function>, <format>)
