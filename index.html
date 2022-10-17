@@ -359,6 +359,22 @@
       const video = document.getElementById("tm-video");
     });
 
+    // Place an anonymous function in the Boxever queue
+    //Send a VIEW event to CDP
+    _boxeverq.push(function () {
+      var viewEvent = {
+        browser_id: Boxever.getID(),
+        channel: "WEB",
+        type: "VIEW",
+        language: "EN",
+        currency: "USD",
+        page: "homepage",
+        pos: "{{pointOfSale}}",
+      };
+      // Invoke event create
+      // (<event msg>, <callback function>, <format>)
+      Boxever.eventCreate(viewEvent, function (data) { }, "json");
+    });
   </script>
 </body>
 
