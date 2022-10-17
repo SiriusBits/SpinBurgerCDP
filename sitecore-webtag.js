@@ -5,7 +5,7 @@
     // Define the Boxever settings 
     var _boxever_settings = {
         client_key: 'klus01taib90pmh5tnf817nbmgiksmdg', // Replace with your client key
-        target: 'https://api-us.boxever.com/v1.2', // Replace with your API target endpoint specific to your data center region
+        target: 'https://api-us.boxever.com/v2', // Replace with your API target endpoint specific to your data center region
         cookie_domain: '.spin-burger-cdp.netlify.app/', // Replace with the top level cookie domain of the website that is being integrated e.g ".example.com" and not "www.example.com"
         javascriptLibraryVersion: '1.4.9', // Replace with the latest Boxever JavaScript Library version"
         pointOfSale: 'SpinBurgerCDP', // Replace with the same point of sale configured in system settings"
