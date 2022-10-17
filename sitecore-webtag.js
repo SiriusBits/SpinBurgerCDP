@@ -1,4 +1,4 @@
-<script type="text/javascript">
+
     // Define the Boxever queue 
     var _boxeverq = _boxeverq || [];
 
@@ -18,4 +18,3 @@
          s.src = 'https://d1mj578wat5n4o.cloudfront.net/boxever-1.4.9.min.js';
          var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
     })();
-</script>
